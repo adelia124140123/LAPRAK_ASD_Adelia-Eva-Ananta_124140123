@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+// Prosedur untuk menghitung jumlah kuadrat dan perkalian bilangan ganjil
+void operasiMatematika(int *x, int y, long long *z) {
+    *x = 0;   // inisialisasi
+    *z = 1;   
+
+    for (int n = 1; n <= y; n++) {
+        *x += (n * n);       // jumlah kuadrat
+        *z *= (2 * n - 1);   // perkalian bilangan ganjil
+    }
+}
+
+int main() {
+    int y = 20;    // inisialisasi
+    int hasilX;
+    long long hasilZ; // pakai long long agar muat hasil perkalian besar
+
+    operasiMatematika(&hasilX, y, &hasilZ);
+
+    cout << "Hasil *x (jumlah kuadrat 1..20) = " << hasilX << endl;
+    cout << "Hasil *z (perkalian bilangan ganjil 1..20) = " << hasilZ << endl;
+
+    return 0;
+}
