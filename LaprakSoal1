@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+// Prosedur untuk menghitung jumlah bilangan ganjil
+void jumlahBilanganGanjil(int *x, int y) {
+    *x = 0; // inisialisasi hasil
+    for (int i = 1; i <= y; i++) {
+        if (i % 2 != 0) { // mengecek apakah bilangan ganjil
+            *x += i;
+        }
+    }
+}
+
+int main() {
+    int y, hasil;
+    
+    cout << "Masukkan nilai y: ";
+    cin >> y;
+    
+    // Panggil prosedur dengan pointer ke hasil
+    jumlahBilanganGanjil(&hasil, y);
+    
+    cout << "Hasil penjumlahan bilangan ganjil dari 1 sampai " 
+         << y << " = " << hasil << endl;
+    
+    return 0;
+}
